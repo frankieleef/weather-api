@@ -12,6 +12,12 @@ public class WeatherService {
     public WeatherForecast GetForecast(DayOfWeek dayOfWeek) 
     {
         DateTime currentDate = new DateTime();
+
+        if ((int)currentDate.Month == 9) 
+        {
+            throw new Exception("Month is September, we don't have any forecasts");
+        }
+        
         return new WeatherForecast()
         {
             Date = new DateTime(currentDate.Year, currentDate.Month, (int)dayOfWeek),
