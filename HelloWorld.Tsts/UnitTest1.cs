@@ -13,7 +13,7 @@ public class UnitTest1
     public void TestIfCorrectDayOfWeek()
     {
         var weatherService = new WeatherService();
-        var weatherForecast = weatherService.GetForecast(DayOfWeek.Monday);
+        var weatherForecast = weatherService.GetForecast(DayOfWeek.Tuesday);
         Assert.Equal(2, (int)weatherForecast.Date.Day);
     }
 
