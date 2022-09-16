@@ -14,7 +14,7 @@ public class UnitTest1
     {
         var weatherService = new WeatherService();
         var weatherForecast = weatherService.GetForecast(DayOfWeek.Monday);
-        Assert.Equal(1, (int)weatherForecast.Date.Day);
+        Assert.Equal(2, (int)weatherForecast.Date.Day);
     }
 
     [Fact]
